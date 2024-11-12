@@ -1,3 +1,6 @@
+--create database schema
+CREATE schema SALES_DB;
+
 --create customers table
 CREATE TABLE CUSTOMERS (
   customer_id INT PRIMARY KEY AUTO_INCREMENT, 
@@ -9,7 +12,7 @@ CREATE TABLE CUSTOMERS (
   city VARCHAR(100) NULL, 
   state VARCHAR(50) NULL,
   postal_code VARCHAR(20) NULL
-)
+);
 
 
 --create products table
@@ -19,7 +22,7 @@ CREATE TABLE PRODUCTS(
   description TEXT NULL,
   price DECIMAL(10,2) NOT NULL
   stock_quantity INT NOT NULL
-)
+);
 
 
 --sales order table
@@ -30,7 +33,7 @@ CREATE TABLE SALES_ORDERS(
   status VARCHAR(20) NOT NULL, 
   total_amount DECIMAL(10,2) NOT NULL,
   FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(customer_id)
-)
+);
 
 --order details table
 CREATE TABLE ORDER_DETAILS (
@@ -42,7 +45,7 @@ CREATE TABLE ORDER_DETAILS (
   total_price DECIMAL(10,2) NOT NULL,
   FOREIGN KEY (order_id) REFERENCES SALES_ORDERS(order_id), 
   FOREIGN KEY (product_id) REFERENCES PRODUCTS(product_id) 
-)
+);
 
 CREATE TABLE PAYMENTS(
   payment_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -52,5 +55,5 @@ CREATE TABLE PAYMENTS(
   payment_method VARCHAR(20) NOT NULL,
   payment_status VARCHAR(20) NOT NULL,
   FOREIGN KEY (order_id) REFERENCES SALES_ORDERS(order_id)
-)
+);
 
