@@ -1,0 +1,5 @@
+pandas
+Boto3
+pymysql
+psycopg2-binary
+faker

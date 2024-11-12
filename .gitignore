@@ -1,0 +1,14 @@
+# Virtual environment
+venv/
+
+# Python bytecode
+*.pyc
+__pychache__/
+
+# IDE Config files
+.vscode/
+.idea/
+
+# System-specific files
+.DS_Store
+Thumbs.db
