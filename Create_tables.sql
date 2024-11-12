@@ -29,7 +29,7 @@ CREATE TABLE PRODUCTS(
 CREATE TABLE SALES_ORDERS(
   order_id INT PRIMARY KEY,
   customer_id INT,
-  order_date Datetime NOT NULL,
+  order_date Timestamp NOT NULL,
   status VARCHAR(20) NOT NULL, 
   total_amount DECIMAL(10,2) NOT NULL,
   FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(customer_id)
@@ -37,7 +37,7 @@ CREATE TABLE SALES_ORDERS(
 
 --order details table
 CREATE TABLE ORDER_DETAILS (
-  order-detail_id INT PRIMARY KEY,
+  order_detail_id INT PRIMARY KEY,
   order_id INT,
   product_id INT,
   quantity INT NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE ORDER_DETAILS (
 CREATE TABLE PAYMENTS(
   payment_id SERIAL PRIMARY KEY,
   order_id INT,
-  payment_date DATETIME NOT NULL,
+  payment_date Timestamp NOT NULL,
   payment_amount DECIMAL(10,2) NOT NULL,
   payment_method VARCHAR(20) NOT NULL,
   payment_status VARCHAR(20) NOT NULL,
