@@ -3,7 +3,7 @@ CREATE schema SALES_DB;
 
 --create customers table
 CREATE TABLE CUSTOMERS (
-  customer_id INT PRIMARY KEY AUTO_INCREMENT, 
+  customer_id SERIAL PRIMARY KEY, 
   first_name VARCHAR(50) NOT NULL,
   last_name VARCHAR(50) NOT NULL,
   email VARCHAR(100) NULL,
@@ -17,7 +17,7 @@ CREATE TABLE CUSTOMERS (
 
 --create products table
 CREATE TABLE PRODUCTS(
-  product_id INT PRIMARY KEY AUTO_INCREMENT,
+  product_id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   description TEXT NULL,
   price DECIMAL(10,2) NOT NULL
@@ -27,7 +27,7 @@ CREATE TABLE PRODUCTS(
 
 --sales order table
 CREATE TABLE SALES_ORDERS(
-  order_id INT PRIMARY KEY AUTO_INCREMENT,
+  order_id INT PRIMARY KEY,
   customer_id INT,
   order_date Datetime NOT NULL,
   status VARCHAR(20) NOT NULL, 
@@ -37,7 +37,7 @@ CREATE TABLE SALES_ORDERS(
 
 --order details table
 CREATE TABLE ORDER_DETAILS (
-  order-detail_id INT PRIMARY KEY AUTO_INCREMENT,
+  order-detail_id INT PRIMARY KEY,
   order_id INT,
   product_id INT,
   quantity INT NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE ORDER_DETAILS (
 );
 
 CREATE TABLE PAYMENTS(
-  payment_id INT PRIMARY KEY AUTO_INCREMENT,
+  payment_id SERIAL PRIMARY KEY,
   order_id INT,
   payment_date DATETIME NOT NULL,
   payment_amount DECIMAL(10,2) NOT NULL,
