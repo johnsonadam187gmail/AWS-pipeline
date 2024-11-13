@@ -3,3 +3,6 @@ Boto3
 pymysql
 psycopg2-binary
 faker
+sqalchemy
+python-dotenv
+sys
