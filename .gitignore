@@ -12,3 +12,6 @@ __pychache__/
 # System-specific files
 .DS_Store
 Thumbs.db
+
+#Credentials
+.env 
