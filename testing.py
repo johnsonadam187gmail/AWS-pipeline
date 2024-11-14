@@ -26,7 +26,7 @@ placeholders = ', '.join(['%s'] * len(column_list))  # Creates '%s, %s, %s, ...'
 if len(column_list) == len(value_list):
   query = f"""INSERT INTO {schema}.{table} ({', '.join(column_list)}) VALUES ({placeholders});"""
 else:
-  logging.error("Error: Numbner of columns does not match the number of values")
+  logging.error("Error: Number of columns does not match the number of values")
 
 print(query)
 

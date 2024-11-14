@@ -1,0 +1,17 @@
+#TODO 
+functionise sending query - partial
+
+create function for getting number of columns and col names
+  generate new query
+  insert values
+
+random generate a number of orders to run each day
+schedule the process to run daily
+
+
+think about another data source 
+maybe employees db
+link employees to sales by order_id
+
+can add analysis of sales per employee
+
