@@ -6,3 +6,6 @@ faker
 sqalchemy
 python-dotenv
 sys
+random
+datetime
+decimal
